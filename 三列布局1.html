@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>三列布局-middle第一个加载</title>
+		<style type="text/css">
+			div{
+				height: 300px;
+			}
+			.left,.right{width: 200px;}
+			
+			.left{
+				background: purple;
+				float: left;
+				margin-left: -100%;
+			}
+			.middle{
+				background: pink;
+				float: left;
+				width: 100%;
+				padding: 0 200px;
+				box-sizing: border-box;
+			}
+			.right{
+				background: brown;
+				float: left;
+				margin-left: -200px;
+				
+			}
+			
+			.container{*zoom: 1;min-width: 600px;}
+			.container::after{content: '';display: block;clear: both;}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="middle">middle</div>
+			<div class="left">left</div>
+			<div class="right">right</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>伪等高布局</title>
+		<style type="text/css">
+			*{padding: 0px;margin: 0px;}
+			.container{*zoom: 1;width: 800px;margin: 0 auto;border: solid 1px;overflow: hidden;}
+			.container::after{display: block;content: '';clear: both;}
+			.left{float: left;width: 400px;background: pink;padding-bottom:1000px ;margin-bottom: -1000px;}
+			.right{float: left;width: 400px;background: brown;padding-bottom:1000px ;margin-bottom: -1000px;}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="left">
+				left<br />		
+				left<br />		
+				left<br />		
+			</div>
+			<div class="right">
+				right<br />				
+				right<br />				
+				right<br />				
+				right<br />				
+				right<br />				
+				right<br />				
+			</div>
+		</div>
+	</body>
+</html>
